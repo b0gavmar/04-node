@@ -21,7 +21,7 @@ app.use('/admin',adminRoutes);
 app.use('/', shopRoutes);
 
 app.use((req,res)=>{
-        res.status(404).sendFile(path.join(__dirname,'views','404.ejs'));
+        res.status(404).render('404.ejs');
 });
 
 app.listen(PORT, () => console.log(`server runs on http://localhost:${PORT}`))

@@ -6,7 +6,7 @@ import __dirname from '../util/rootpath.js';
 const router = express.Router();
 
 router.get('/',(req,res)=>{
-    res.status(404).sendFile(path.join(__dirname, 'views', 'shop.ejs'));;
+    res.status(404).render('shop.ejs');
 });
 
 export default router;
