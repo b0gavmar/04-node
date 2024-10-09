@@ -5,8 +5,11 @@ import __dirname from '../util/rootpath.js';
 
 const router = express.Router();
 
-router.get('/',(req,res)=>{
-    res.status(404).render('shop.ejs');
+router.get('/', (req, res) => {
+    res.status(404).render('shop.ejs', {
+        pageTitle: 'Shop',
+        path: '/'
+    });
 });
 
 export default router;
